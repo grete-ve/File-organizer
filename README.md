@@ -3,6 +3,7 @@
 
 This project is designed to organize files based on their metadata. The project structure is as follows:
 
+```bash
 File-organizer
 ├── !inbox
 │   └── note to be moved
@@ -19,7 +20,7 @@ File-organizer
 │   ├── group
 │   │   └── note to be moved if changes made
 └── main.py
-
+```
 
 - "!inbox" directory contains notes that need to be moved to the appropriate directories based on their metadata.
 
@@ -33,27 +34,35 @@ To create a note that can be moved by the program, simply create a text file in 
 
 The program uses metadata to determine where to move the notes. This metadata should be included at the top of the note, and should be formatted as follows:
 
+```bash
 ---
 project: name
 ---
+```
 
 or
 
+```bash
 ---
 area: name
 ---
+```
 
 or
 
+```bash
 ---
 resource: name
 ---
+```
 
 or
 
+```bash
 ---
 other: name
 ---
+```
 
 
 The program will read this metadata and move the note to the corresponding directory and group. For example, if a note has the metadata project: myProject, the program will move the note to the 1. Projects/myProject directory. If the specified group does not exist, the program will create it.
